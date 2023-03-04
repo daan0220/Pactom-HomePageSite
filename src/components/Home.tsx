@@ -2,7 +2,7 @@ import React from "react";
 import reactImage from "../Images/react.png";
 import jsImage from "../Images/js.png";
 import TsbaseImage from "../Images/Typescript_logo_2020.svg.png";
-import profileImage from "../Images/IMG_6211 2.jpeg";
+import profileImage from "../Images/IMG_6211 2.jpg";
 import { motion } from "framer-motion";
 import InitialTransition from "../utils/InitialTransition";
 import { Button } from "react-bootstrap";
