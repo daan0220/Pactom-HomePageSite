@@ -1,18 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import InitialTransition from "../utils/InitialTransition";
-import MyImage from "../Images/IMG_3052.jpg";
+import InitialTransition from "../../utils/InitialTransition";
+import MyImage from "../../Images/IMG_3052.jpg";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
 import Carousel from 'react-bootstrap/Carousel';
-import mtv0 from "../Images/mtv0.jpg";
-import mtv1 from "../Images/mtv1.jpg";
-import mtv2 from "../Images/mtv2.jpg";
+import mtv0 from "../../Images/mtv0.jpg";
+import mtv1 from "../../Images/mtv1.jpg";
+import mtv2 from "../../Images/mtv2.jpg";
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
+import Footer from "../Footer";
 
 const CustomToggle = ({ children, eventKey }: { 
   children: JSX.Element;
@@ -149,9 +150,9 @@ const Blog = () => {
       </Card>
     </Accordion>
     <p className="text-muted">企業様から、契約などをいただいた暁には、ひとつひとつの業務に対して責任を持って対応させていただきます。</p>
+    <Footer />
     </Row>
     </Container>
-    
       </motion.div>
     </InitialTransition>
   );

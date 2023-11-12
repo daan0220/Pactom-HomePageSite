@@ -38,7 +38,7 @@ nav ul {
 nav ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 nav ul li a {
@@ -53,13 +53,19 @@ nav ul li a:hover {
 }
 
 .container {
-  height: 100vh;
-  padding: 120px;
+   padding: 120px;
 }
 
 .container h1 {
   text-align: center;
   font-size: 50px;
+}
+
+.profile-info {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profileImage {
@@ -80,7 +86,7 @@ img {
 }
 
 .service {
-  margin-top: 80px;
+  margin-top: 400px; /* 調整が必要な値に変更してください */
   margin-bottom: 60px;
 }
 
@@ -93,13 +99,6 @@ img {
 
 #skill {
   margin-bottom: 100px;
-}
-
-#sns img {
-  object-fit: cover;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  height: 300px;
 }
 
 .container1 {
@@ -160,4 +159,32 @@ margin-bottom: 30px;
 
 #future .button {
   border-radius: 10px;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart {
+  width: 40%; /* グラフの横幅を調整 */
+  margin: 10px; /* グラフの間隔を調整 */
+}
+
+.chart-text {
+  margin-top: 90px;
+}
+
+.chart-text ul {
+  list-style-type: none; /* リストのマーカーを削除 */
+  padding: 0; /* デフォルトのパディングを削除 */
+  margin: 0; /* デフォルトのマージンを削除 */
+}
+
+.chart-text li::before {
+  content: ""; /* マーカーを削除 */
+}
+
+.title {
+  margin-bottom: 70px; 
 }

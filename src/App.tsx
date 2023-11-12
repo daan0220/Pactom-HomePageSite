@@ -6,9 +6,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
+import Home from "./components/home/Home";
+import Blog from "./components/about/Blog";
+import Service from "./components/service/Service";
 import { AnimatePresence } from "framer-motion";
 import InitialTransition from "./utils/InitialTransition";
 
@@ -23,8 +23,8 @@ function App() {
           <Header />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<Blog />} />
+            <Route path="/service" element={<Service/>} />
           </Routes>
         </InitialTransition>
       </AnimatePresence>
