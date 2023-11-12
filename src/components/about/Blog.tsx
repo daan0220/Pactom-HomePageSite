@@ -2,14 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import MyImage from "../../Images/IMG_3052.jpg";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
-import Carousel from 'react-bootstrap/Carousel';
-import mtv0 from "../../Images/mtv0.jpg";
-import mtv1 from "../../Images/mtv1.jpg";
-import mtv2 from "../../Images/mtv2.jpg";
+import { Container, Row, Col } from "react-bootstrap";
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
@@ -37,6 +31,12 @@ const CustomToggle = ({ children, eventKey }: {
  
 
 const Blog = () => {
+
+  const timelineVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeInOut" } },
+  };
+
   return (
     <InitialTransition>
       <motion.div
@@ -75,47 +75,36 @@ const Blog = () => {
       <hr />
 
       <Row className="text-center">
-      <h1 className="word">My favorite word</h1> 
-        <Carousel fade >
-          <Carousel.Item>
-            <Image
-              className="d-block w-100"
-              src={mtv0}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h2>何事も成し遂げるまではいつでも不可能に見える</h2>
-              <p>ネルソン・マンデラ（元・南アフリカ大統領）</p>
-            </Carousel.Caption>
-
-          </Carousel.Item>
-          <Carousel.Item className="img">
-            <Image 
-              className="d-block w-100"
-              src={mtv1}
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h2>成功に囚われるな、成長に囚われろ</h2>            
-              <p>本田圭佑（元・サッカー日本代表、起業家）</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={mtv2}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h2>他人の人生に影響を与えてこそ人生には意味がある</h2>
-              <p>
-              ジャッキー・ロビンソン（黒人初のメジャーリーガー）
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-      </Carousel>
+      <Container>
+      <Row>
+        <Col md={12}>
+          <h2 className="text-center mb-4">My Career Timeline</h2>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Col md={10}>
+          <motion.div
+            className="timeline"
+            variants={timelineVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div className="timeline-item">
+              <h4>Job Title 1</h4>
+              <p>Company Name 1</p>
+              <p>Start Date - End Date</p>
+            </motion.div>
+            <motion.div className="timeline-item">
+              <h4>Job Title 2</h4>
+              <p>Company Name 2</p>
+              <p>Start Date - End Date</p>
+            </motion.div>
+            {/* Add more timeline items as needed */}
+          </motion.div>
+        </Col>
+      </Row>
+    </Container>
+        
       <p className="text-muted" >上記以外の言葉でも、自分の行動と言動を見つめ直し、日々成長しています</p>
       </Row>
 

@@ -188,3 +188,21 @@ margin-bottom: 30px;
 .title {
   margin-bottom: 70px; 
 }
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.timeline-item {
+  border: 2px solid #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+}
+
+.timeline-item h4 {
+  color: #3498db;
+}
