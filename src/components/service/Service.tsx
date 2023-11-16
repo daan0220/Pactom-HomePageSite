@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import Footer from "../Footer";
 import '@fortawesome/fontawesome-free/css/all.css'; 
+import ServiseImg from "../../Images/スクリーンショット 2023-11-16 11.32.23.png";
+import { Link } from 'react-router-dom';
+import { Button } from "react-bootstrap";
 
 const Contact = () => {
   return (
@@ -16,29 +19,20 @@ const Contact = () => {
         <section id="service">
           <div className="text-center">
             <h1>ECommerce</h1>
+            <div className="row text-center">
+                <div className="col-md-6 offset-md-3">
+                <img src={ServiseImg} className="" alt="" />
+                  <h4 className="my-3"></h4>
+                  <Link to="https://github.com/daan0220/rails-ecsite">
+                    <Button variant="link">詳細はこちらをクリック</Button>
+                  </Link>
+                  <p className="text-muted">
+                    
+                  </p>
+                </div>
+              </div>
+            <Footer/>
           </div>
-          <div className="service-description">
-            <h2>機能一覧</h2>
-            <ul>
-              <li>共通
-                <ul>
-                  <li>全ての画面は、レスポンシブ対応しています。</li>
-                  <li>管理者側の画面は、認証画面を除いて、管理者としてログインしないと閲覧できません。</li>
-                  <li>顧客側の画面は、認証画面・商品に関する画面を除いて、顧客としてログインしないと閲覧できません。</li>
-                </ul>
-              </li>
-              <li>管理者側
-                <ul>
-                  <li>ナビゲーションバー</li>
-                  <li>ログインページ</li>
-                  {/* 他の項目を追加 */}
-                </ul>
-              </li>
-              {/* 他の項目を追加 */}
-            </ul>
-            {/* 顧客側の機能に関する情報を追加 */}
-          </div>
-          <Footer/>
         </section>
       </motion.div>
     </InitialTransition>

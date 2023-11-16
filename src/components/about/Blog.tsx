@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
-import MyImage from "../../Images/IMG_3052.jpg";
-import Image from 'react-bootstrap/Image'
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import Footer from "../Footer";
 import Timeline from "./Timeline";
+import { FaGithub, FaBlogger } from 'react-icons/fa';
 
 const CustomToggle = ({ children, eventKey }: { 
+  
   children: JSX.Element;
   eventKey: string;
 }): JSX.Element => {
@@ -38,6 +38,10 @@ const Blog = () => {
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeInOut" } },
   };
 
+  const githubLink = 'https://github.com/daan0220'; 
+  const blogLink = 'https://zenn.dev/daan0220'; 
+
+
   return (
     <InitialTransition>
       <motion.div
@@ -51,16 +55,21 @@ const Blog = () => {
 
     <Container>
       <Row className="produce" >
-          <Col  xs={{ order: 'first' }} className="font">
-                  <h1 className="text-start">
-                    Hi!
-                    <br />
-                    I'm Daiki Ando
-                    <br />
-                    Engineer
+          <Col  xs={{ order: 'first' }} className="font text-center">
+                  <h1>
+                    Hi! I'm Daiki Ando Engineer
                   </h1>
+                  <div className="social-icons">
+                    <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="icon" size={64} />
+                    </a>
+                    <span className="icon-spacing"></span>
+                    <a href={blogLink} target="_blank" rel="noopener noreferrer">
+                      <FaBlogger className="icon" size={64} />
+                    </a>
+                  </div>
                   <p className="text-muted">
-                  2002年に京都府で生まれ（現大学2年生）小学生〜大学2年生秋までサッカーに打ち込んでいました。高校時には香川県で寮生活をして、全国高校サッカー選手権に出場、その後国士舘大学に入学を決め、サッカー部として活動をしていました。大学2年の秋に1年休学をしてサッカー留学をすることを決めドイツに渡航。しかし、怪我をしてしまい10ヶ月程で帰国をしました。そこでサッカー人生に終止符を打ち、幼い頃からサッカーに全力投球していた自分はドイツ渡航中から始めていたプログラミングを極めることにシフトチェンジしました。ドイツから日本のスタートアップ企業にインターンシップ生として実務を積んでいましたが、時差などサッカーとの両立ができず2ヶ月程で辞退となりました。現在はType script,Reactを中心とした個人開発を進めています。
+                  2002年に京都府で生まれ（現大学3年生）小学生〜大学2年生秋までサッカーに打ち込んでいました。高校時には香川県で寮生活をして、全国高校サッカー選手権に出場、その後国士舘大学に入学を決め、サッカー部に所属。2年生の秋に1年休学をしてドイツにサッカー留学。怪我などもあり、サッカー選手になることをあきらめ、渡航中にエンジニアを目指すことにシフトチェンジしました。現在はType script,React,Go,Railsなどを中心とした個人開発を進めています。
                   </p>          
           </Col>
       </Row>
@@ -92,7 +101,7 @@ const Blog = () => {
           <CustomToggle eventKey="0"><p>The target for 1 year after</p></CustomToggle>
         </Card.Header>
         <Accordion.Collapse eventKey="0">
-          <Card.Body>1年後には就職活動が本格的に始まるので、良いスタートが切れるように、資格の取得（TOEIC.ドイツ語検定.中国語検定）と、Typescript,Reactを使用したアプリケーションを3つ制作し、エンジニアとしてのポテンシャルを高めていきます。</Card.Body>
+          <Card.Body>1年後には就職活動が本格的に始まるので、良いスタートが切れるように、資格の取得（TOEIC）と、Typescript,React,Go,Railsなどを使用したアプリケーションを3つ制作し、エンジニアとしてのポテンシャルを高めていきます。</Card.Body>
         </Accordion.Collapse>
       </Card>
       <Card className="card1">
