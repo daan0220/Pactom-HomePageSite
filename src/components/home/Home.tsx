@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import FrontendChart from "./FrontendChart";
 import BackendChart from "./BackendChart";
-import profileImage from "../../Images/IMG_6211 2.jpg";
 import Footer from "../Footer";
+import ServiseImg from "../../Images/スクリーンショット 2023-11-16 11.32.23.png";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-  function onClickHandleD() {
-    window.open("https://main.d38flg0ys61q9z.amplifyapp.com");
-  }
 
   return (
     <motion.section exit={{ opacity: 0 }}>
@@ -20,10 +18,12 @@ const Home = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >
+        >          
           <div className="profile-info">
             <h1>DAIKI ANDO</h1>
-            <img src={profileImage} className="profileImage" alt="Profile" />
+            <div className="scroll-indicator">
+                <p>Scroll down for more</p>
+            </div>
           </div>
           <section className="page-section" id="services">
             <div className="service">
@@ -32,15 +32,11 @@ const Home = () => {
               </div>
               <div className="row text-center">
                 <div className="col-md-6 offset-md-3">
-                  <span className="fa-stack fa-4x">
-                    <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h2>現在開発中のためクロージング中です</h2>
+                <img src={ServiseImg} className="" alt="" />
                   <h4 className="my-3"></h4>
-                  <Button variant="link" onClick={onClickHandleD}>
-                    詳細はこちらをクリック
-                  </Button>
+                  <Link to="https://github.com/daan0220/rails-ecsite">
+                    <Button variant="link">詳細はこちらをクリック</Button>
+                  </Link>
                   <p className="text-muted">
                     
                   </p>

@@ -8,6 +8,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import Footer from "../Footer";
+import Timeline from "./Timeline";
 
 const CustomToggle = ({ children, eventKey }: { 
   children: JSX.Element;
@@ -28,7 +29,7 @@ const CustomToggle = ({ children, eventKey }: {
     </button>
   );
 }
- 
+
 
 const Blog = () => {
 
@@ -45,10 +46,6 @@ const Blog = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        
-        // initial={{ width: 0 }}
-        // animate={{ width: "100%" }}
-        // exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
       >
 
 
@@ -66,10 +63,6 @@ const Blog = () => {
                   2002年に京都府で生まれ（現大学2年生）小学生〜大学2年生秋までサッカーに打ち込んでいました。高校時には香川県で寮生活をして、全国高校サッカー選手権に出場、その後国士舘大学に入学を決め、サッカー部として活動をしていました。大学2年の秋に1年休学をしてサッカー留学をすることを決めドイツに渡航。しかし、怪我をしてしまい10ヶ月程で帰国をしました。そこでサッカー人生に終止符を打ち、幼い頃からサッカーに全力投球していた自分はドイツ渡航中から始めていたプログラミングを極めることにシフトチェンジしました。ドイツから日本のスタートアップ企業にインターンシップ生として実務を積んでいましたが、時差などサッカーとの両立ができず2ヶ月程で辞退となりました。現在はType script,Reactを中心とした個人開発を進めています。
                   </p>          
           </Col>
-
-          <Col xs={{ order: 'last' }} >
-          <Image src={MyImage} className="img"/>
-          </Col>
       </Row>
 
       <hr />
@@ -78,34 +71,15 @@ const Blog = () => {
       <Container>
       <Row>
         <Col md={12}>
-          <h2 className="text-center mb-4">My Career Timeline</h2>
+          <h1 className="text-center mb-4">My Career Timeline</h1>
         </Col>
       </Row>
       <Row className="justify-content-center">
         <Col md={10}>
-          <motion.div
-            className="timeline"
-            variants={timelineVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.div className="timeline-item">
-              <h4>Job Title 1</h4>
-              <p>Company Name 1</p>
-              <p>Start Date - End Date</p>
-            </motion.div>
-            <motion.div className="timeline-item">
-              <h4>Job Title 2</h4>
-              <p>Company Name 2</p>
-              <p>Start Date - End Date</p>
-            </motion.div>
-            {/* Add more timeline items as needed */}
-          </motion.div>
+            <Timeline/>
         </Col>
       </Row>
-    </Container>
-        
-      <p className="text-muted" >上記以外の言葉でも、自分の行動と言動を見つめ直し、日々成長しています</p>
+      </Container>
       </Row>
 
       <hr />
