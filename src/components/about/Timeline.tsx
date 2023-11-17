@@ -5,14 +5,10 @@ interface TimelineItemProps {
   year: string;
   title: string;
   description: string;
-  details: string; 
+  link: string; 
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ year, title, description, details }) => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+const TimelineItem: React.FC<TimelineItemProps> = ({ year, title, description, link }) => {
 
   return (
     <div className="timeline-item">
@@ -20,22 +16,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ year, title, description, d
         <h4>{year}</h4>
         <h5>{title}</h5>
         <p>{description}</p>
-        <Button variant="secondary" onClick={handleShow} className="custom-button">
-          View Details
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>{title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>{details}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        <p>
+          <a href={link} target="_blank" rel="noopener noreferrer" className="custom-button">
+            関連リンクを開く
+          </a>
+        </p>
       </div>
     </div>
   );
@@ -47,67 +32,67 @@ const MyCareerTimeline: React.FC = () => {
       year: "2022.05〜2022.08",
       title: 'ON株式会社',
       description: 'フロントエンドエンジニア',
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec libero vitae urna aliquet faucibus. Nullam convallis purus quis felis sodales, sed fermentum ex semper.'
+      link: 'https://o-n.co.jp/',
     },
     {
       year: "2023.03〜2023.09",
       title: '株式会社Enginee',
       description: 'フロント・バックエンドエンジニア',
-      details: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque vitae mi sit amet ex congue tincidunt sed et lectus.'
+      link: 'https://enginee.co.jp/'
     },
     {
       year: "2023.03.01〜現在",
       title: 'HOUSEI株式会社',
       description: 'フロント・バックエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://www.housei-inc.com/'
     },
     {
       year: "2023.11〜現在",
       title: '株式会社マネーフォワード',
       description: 'フロント・バックエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://hrmos.co/pages/moneyforward/jobs/1705418982829588664'
     },
     {
       year: "1month",
       title: '株式会社ラクス',
       description: 'フロント・バックエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://fresh-recruit.rakus.co.jp/recruit/internship.html'
     },
     {
       year: "1day",
       title: 'Sansan株式会社',
       description: 'バックエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://www.wantedly.com/projects/1317127'
     },
     {
       year: "1month",
       title: 'GAテクノロジーズ',
       description: 'バックエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://www.ga-tech.co.jp/recruit/newgraduate/internship/'
     },
     {
       year: "1day",
       title: '株式会社MIXI',
       description: 'Git challenge #13',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'https://mixi-recruit.snar.jp/jobboard/detail.aspx?id=IhXWImnIhox5L-Q51iCNlQ'
     },
     {
       year: "1week",
       title: '名古屋web3 ハッカソン',
       description: 'フロントエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
     },
     {
       year: "2weeks",
       title: '技育CAMPハッカソン大阪',
       description: 'フロントエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
     },
     {
       year: "2days",
       title: 'JPHACKS 2023',
       description: 'フロントエンドエンジニア',
-      details: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+      link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
     },
     
   ];
