@@ -263,3 +263,10 @@ margin-bottom: 30px;
 .custom-button:hover {
   background-color: #2980b9;
 }
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
