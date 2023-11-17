@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 interface TimelineItemProps {
   year: string;
@@ -75,6 +75,12 @@ const MyCareerTimeline: React.FC = () => {
       title: '株式会社MIXI',
       description: 'Git challenge #13',
       link: 'https://mixi-recruit.snar.jp/jobboard/detail.aspx?id=IhXWImnIhox5L-Q51iCNlQ'
+    },
+    {
+      year: "1day",
+      title: '株式会社ゆめみ',
+      description: 'サーバー・インフラ設計手法',
+      link: 'https://www.yumemi.co.jp/202301202_winter_intern'
     },
     {
       year: "1week",

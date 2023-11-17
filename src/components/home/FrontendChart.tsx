@@ -40,7 +40,7 @@ const FrontendSkillsChart: React.FC = () => {
               display: true,
               position: 'bottom',
               labels: {
-                color: '#333',
+                color: 'black',
                 boxWidth: 12,
                 padding: 16,
                 usePointStyle: true,

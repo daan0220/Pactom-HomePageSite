@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="text-dark py-5">
+    <footer className="text-white py-5" >
       <div className="container">
       
         <div className="row">
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             </div>
             </div>
             <section id="contact-form" className="text-center">
-            <Button variant="gray" onClick={openGoogleForm}>
+            <Button variant="primary" onClick={openGoogleForm}>
                 Open Google Form <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2" />
             </Button>
             </section>

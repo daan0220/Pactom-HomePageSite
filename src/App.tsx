@@ -11,13 +11,13 @@ import Blog from "./components/about/Blog";
 import Service from "./components/service/Service";
 import { AnimatePresence } from "framer-motion";
 import InitialTransition from "./utils/InitialTransition";
-
-/* https://www.section.io/engineering-education/page-transition-in-react-using-framer-motion/ */
+import ThreeBackground from "./components/ThreeBackground"; 
 
 function App() {
   const location = useLocation();
   return (
     <div className="App">
+      <ThreeBackground />
       <AnimatePresence>
         <InitialTransition>
           <Header />

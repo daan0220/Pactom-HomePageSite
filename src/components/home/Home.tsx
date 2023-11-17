@@ -1,4 +1,5 @@
-import { Button } from "react-bootstrap";
+import { Button, Card} from "react-bootstrap";
+
 import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import FrontendChart from "./FrontendChart";
@@ -49,11 +50,15 @@ const Home = () => {
               <h1 className="section-heading text-uppercase">Skills</h1>
             </div>
             <div className="charts-container row">
-              <div className="col-md-6">
+            <div className="col-md-6 d-flex justify-content-center">
+                <Card style={{ width: '27rem', height: '27rem', padding: '1rem', margin: '1rem' }}>
                 <FrontendChart />
+                </Card>
               </div>
-              <div className="col-md-6">
-                <BackendChart />
+              <div className="col-md-6 d-flex justify-content-center">
+                <Card style={{ width: '27rem', height: '27rem', padding: '1rem', margin: '1rem' }}>
+                  <BackendChart />
+                </Card>
               </div>
               <div className="col-md-6 chart-text">
                 <ul>

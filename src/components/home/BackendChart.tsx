@@ -45,6 +45,7 @@ const FullStackSkillsChart: React.FC = () => {
               min: 0,
               max: 5,
               stepSize: 1,
+              
             },
             angleLines: {
               display: false,
@@ -55,7 +56,7 @@ const FullStackSkillsChart: React.FC = () => {
               display: true,
               position: 'bottom',
               labels: {
-                color: '#333',
+                color: 'black',
                 boxWidth: 12,
                 padding: 16,
                 usePointStyle: true,
