@@ -1,14 +1,67 @@
-import { Button, Card} from "react-bootstrap";
-
 import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import FrontendChart from "./FrontendChart";
 import BackendChart from "./BackendChart";
 import Footer from "../Footer";
-import ServiseImg from "../../Images/スクリーンショット 2023-11-16 11.32.23.png";
+import ServiseImg from "../../Images/スクリーンショット 2023-11-21 8.34.25.png";
+import matchImg from "../../Images/スクリーンショット 2023-11-21 8.51.16.png";
+import DAOImg from "../../Images/スクリーンショット 2023-11-21 9.02.47.png";
+import omniaappImg from "../../Images/スクリーンショット 2023-11-20 21.14.52.png";
+import omniawebImg from "../../Images/スクリーンショット 2023-11-20 21.14.04.png";
+import omniachromeImg from "../../Images/スクリーンショット 2023-11-20 21.15.51.png";
 import { Link } from 'react-router-dom';
+import { Button, Card, Row, Col } from 'react-bootstrap';
+
+const projects = [
+  { 
+    title: "Tech Match",
+    image: matchImg,
+    link: "https://github.com/daan0220/rails-ecsite"
+  },
+  { 
+    title: "ECommerce",
+    image: ServiseImg,
+    link: "https://github.com/daan0220/rails-ecsite"
+  },
+  { 
+    title: "J-leagueDAO",
+    image: DAOImg,
+    link: "https://github.com/shake551/fan-chain"
+  },
+  { 
+    title: "Omnia Web",
+    image: omniawebImg,
+    link: "https://github.com/Marley-Mulvin-Broome/tech-translator/tree/master"
+  },
+  { 
+    title: "Omnia App",
+    image: omniaappImg,
+    link: "https://github.com/Marley-Mulvin-Broome/tech-translator/tree/master"
+  },
+  { 
+    title: "Omnia Chrome",
+    image: omniachromeImg,
+    link: "https://github.com/Marley-Mulvin-Broome/tech-translator/tree/master"
+  },
+];
 
 const Home = () => {
+
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+  
+  const cardVariants = {
+    rest: {
+      scale: 1,
+      transition: { duration: 0.3 }
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.3 }
+    }
+  };
 
   return (
     <motion.section exit={{ opacity: 0 }}>
@@ -29,20 +82,32 @@ const Home = () => {
           <section className="page-section" id="services">
             <div className="service">
               <div className="text-center">
-                <h1 className="section-heading text-uppercase">SERVICE</h1>
+                <h1 className="section-heading text-uppercase">SERVICE LIST</h1>
               </div>
-              <div className="row text-center">
-                <div className="col-md-6 offset-md-3">
-                <img src={ServiseImg} className="" alt="" />
-                  <h4 className="my-3"></h4>
-                  <Link to="https://github.com/daan0220/rails-ecsite">
-                    <Button variant="link">詳細はこちらをクリック</Button>
-                  </Link>
-                  <p className="text-muted">
-                    
-                  </p>
-                </div>
-              </div>
+              <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
+            {projects.map((project, index) => (
+              <Col key={index}>
+                <motion.div
+                  variants={cardVariants}
+                  whileHover="hover"
+                  whileTap="hover"
+                  initial="rest"
+                >
+                  <Card className="h-100 shadow-sm">
+                    <div style={{ height: "200px", overflow: "hidden" }}>
+                      <Card.Img variant="top" src={project.image} className="card-img-top" style={{ objectFit: "cover", height: "100%", width: "100%" }} />
+                    </div>
+                    <Card.Body className="d-flex flex-column">
+                      <Card.Title style={{ color: "black" }}>{project.title}</Card.Title>
+                      <Link to={project.link} className="stretched-link">
+                        <Button variant="link" className="mt-auto">詳細はこちらをクリック</Button>
+                      </Link>
+                    </Card.Body>
+                  </Card>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
             </div>
           </section>
           <section id="skill">
