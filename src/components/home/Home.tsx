@@ -128,10 +128,10 @@ const Home = () => {
               </div>
               <div className="col-md-6 chart-text">
                 <ul>
-                  <li>1: 独学・授業程度</li>
-                  <li>2: ある程度書ける</li>
-                  <li>3: イベント・ハッカソン</li>
-                  <li>4: 実務で使用経験あり</li>
+                  <li data-number="1">独学・授業程度</li>
+                  <li data-number="2">ある程度書ける</li>
+                  <li data-number="3">イベント・ハッカソン</li>
+                  <li data-number="4">実務で使用経験あり</li>
                 </ul>
               </div>
             </div>

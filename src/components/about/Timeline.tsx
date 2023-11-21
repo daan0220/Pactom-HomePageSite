@@ -66,7 +66,7 @@ const MyCareerTimeline: React.FC = () => {
     },
     {
       year: "1month",
-      title: 'GAテクノロジーズ',
+      title: '株式会社GAテクノロジーズ',
       description: 'バックエンドエンジニア',
       link: 'https://www.ga-tech.co.jp/recruit/newgraduate/internship/'
     },

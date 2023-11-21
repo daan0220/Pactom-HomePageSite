@@ -201,22 +201,45 @@ color: #010000;
 }
 
 .chart {
-  width: 40%; /* グラフの横幅を調整 */
-  margin: 10px; /* グラフの間隔を調整 */
+  width: 40%;
+  margin: 10px; 
 }
 
 .chart-text {
   margin-top: 90px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+
 }
 
 .chart-text ul {
-  list-style-type: none; /* リストのマーカーを削除 */
-  padding: 0; /* デフォルトのパディングを削除 */
-  margin: 0; /* デフォルトのマージンを削除 */
+  list-style-type: none;
+  padding: 0;
+  text-align: left; 
+  display: inline-block; 
+}
+
+.chart-text li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
 }
 
 .chart-text li::before {
-  content: ""; /* マーカーを削除 */
+  content: attr(data-number);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
 .title {
