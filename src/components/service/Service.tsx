@@ -88,9 +88,10 @@ const Contact = () => {
                     </div>
                     <Card.Body className="d-flex flex-column">
                       <Card.Title style={{ color: "black" }}>{project.title}</Card.Title>
-                      <Link to={project.link} className="stretched-link">
-                        <Button variant="link" className="mt-auto">詳細はこちらをクリック</Button>
-                      </Link>
+                      <Button variant="outline-dark" className="mt-auto">
+                        詳細はこちら <i className="fas fa-arrow-circle-right ms-1"></i>
+                        <Link to={project.link} className="stretched-link"></Link>
+                      </Button>
                     </Card.Body>
                   </Card>
                 </motion.div>
