@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import InitialTransition from "../../utils/InitialTransition";
 import { Container, Row, Col } from "react-bootstrap";

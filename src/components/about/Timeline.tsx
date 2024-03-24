@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 interface TimelineItemProps {
@@ -47,7 +47,13 @@ const MyCareerTimeline: React.FC = () => {
       link: 'https://www.housei-inc.com/'
     },
     {
-      year: "2023.11〜現在",
+      year: "2023.11〜2024.03",
+      title: '株式会社マネーフォワード',
+      description: 'フロント・バックエンドエンジニア',
+      link: 'https://hrmos.co/pages/moneyforward/jobs/1705418982829588664'
+    },
+    {
+      year: "2024.03〜現在",
       title: '株式会社マネーフォワード',
       description: 'フロント・バックエンドエンジニア',
       link: 'https://hrmos.co/pages/moneyforward/jobs/1705418982829588664'
@@ -98,6 +104,18 @@ const MyCareerTimeline: React.FC = () => {
       year: "2days",
       title: 'JPHACKS 2023',
       description: 'フロントエンドエンジニア',
+      link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+    },
+    {
+      year: "2days",
+      title: 'アイフルハッカソン',
+      description: 'データサイエンティスト',
+      link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
+    },
+    {
+      year: "2months",
+      title: 'GifTechハッカソン',
+      description: 'PM/フロントエンドエンジニア',
       link: 'Integer non arcu euismod, viverra orci a, tincidunt nulla. Etiam sollicitudin consectetur elit nec fermentum.'
     },
     
