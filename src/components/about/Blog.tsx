@@ -56,7 +56,7 @@ const Blog = () => {
       <Row className="produce" >
           <Col  xs={{ order: 'first' }} className="font text-center">
                   <h1>
-                    Hi! I'm Daiki Ando Engineer
+                    Hi! I'm Pactom Co-Founder Daiki Ando 
                   </h1>
                   <div className="social-icons">
                     <a href={githubLink} target="_blank" rel="noopener noreferrer">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { ArrowUp } from "react-bootstrap-icons"; // Import the ArrowUp icon
+import { ArrowUp } from "react-bootstrap-icons"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 const Footer: React.FC = () => {
@@ -21,13 +21,13 @@ const Footer: React.FC = () => {
           <div className="col-md-4 mb-4">
             <h2>About Us</h2>
             <p>
-            Daiki.comへようこそ。イノベーションと卓越性が交わる場所です。
+            Pactomへようこそ。イノベーションと卓越性が交わる場所です。
             私たちはIT業界で先進的なソリューションを提供する情熱的なチームです
             </p>
           </div>
           <div className="col-md-4 mb-4">
             <h2>Contact Us</h2>
-            <p>Email: daikisocceta1@gmail.com</p>
+            <p>Email: daikiandoda@pactom.jp</p>
             <p>Phone: 080-9370-2122</p>
             <div className="row text-center">
             <div className="col-md-4 mb-1 services">
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         </Button>
       </div>
       <div className="text-center">
-        <p>&copy; 2023 Daiki.com. All Rights Reserved.</p>
+        <p>&copy; 2024 Pactom All Rights Reserved.</p>
       </div>
     </footer>
   );

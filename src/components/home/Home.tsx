@@ -74,7 +74,7 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >          
           <div className="profile-info">
-            <h1>DAIKI ANDO</h1>
+            <h1>Pactom</h1>
             <div className="scroll-indicator">
                 <p>Scroll down for more</p>
             </div>
