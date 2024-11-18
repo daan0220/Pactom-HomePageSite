@@ -8,7 +8,7 @@ import {
 import Header from "./components/Header";
 import Home from "./components/home/Home";
 import Blog from "./components/about/Blog";
-import Service from "./components/service/Service";
+import PortFolio from "./components/portfolio/PortFolio";
 import { AnimatePresence } from "framer-motion";
 import InitialTransition from "./utils/InitialTransition";
 import ThreeBackground from "./components/ThreeBackground"; 
@@ -24,7 +24,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Blog />} />
-            <Route path="/service" element={<Service/>} />
+            <Route path="/portfolio" element={<PortFolio/>} />
           </Routes>
         </InitialTransition>
       </AnimatePresence>
