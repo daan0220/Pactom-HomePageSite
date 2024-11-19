@@ -8,7 +8,7 @@ import {
 import Header from "./components/Header";
 import Home from "./components/home/Home";
 import Blog from "./components/about/Blog";
-import PortFolio from "./components/portfolio/PortFolio";
+import PortFolio from "./components/portfolio/Portfolio";
 import { AnimatePresence } from "framer-motion";
 import InitialTransition from "./utils/InitialTransition";
 import ThreeBackground from "./components/ThreeBackground"; 

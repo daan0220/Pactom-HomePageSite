@@ -1,78 +1,197 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { ArrowUp } from "react-bootstrap-icons"; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
 const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const openGoogleForm = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSecVhF2_O_QRAi9vF6Enxd9XRr2TUKHAJiABYYcFRkl3hrA0g/viewform?usp=sf_link", '_blank');
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSecVhF2_O_QRAi9vF6Enxd9XRr2TUKHAJiABYYcFRkl3hrA0g/viewform?usp=sf_link",
+      "_blank"
+    );
   };
 
   return (
-    <footer className="text-white py-5" >
-      <div className="container">
-      
-        <div className="row">
-        
-          <div className="col-md-4 mb-4">
-            <h2>About Us</h2>
-            <p>
+    <footer
+      style={{
+        padding: "30px 20px 10px", // 上の余白を抑え、下の空白を縮小
+        color: "#fff",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          flexWrap: "wrap",
+          gap: "20px",
+        }}
+      >
+        {/* About Us */}
+        <div style={{ flex: "1 1 300px" }}>
+          <h2
+            style={{
+              fontSize: "1.8rem",
+              marginBottom: "15px",
+              color: "#ff914d",
+              textShadow: "0px 2px 6px rgba(255, 145, 77, 0.6)",
+            }}
+          >
+            About Us
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.6",
+              color: "#eaeaea",
+            }}
+          >
             Pactomへようこそ。イノベーションと卓越性が交わる場所です。
-            私たちはIT業界で先進的なソリューションを提供する情熱的なチームです
-            </p>
-          </div>
-          <div className="col-md-4 mb-4">
-            <h2>Contact Us</h2>
-            <p>Email: daikiandoda@pactom.jp</p>
-            <p>Phone: 080-9370-2122</p>
-            <div className="row text-center">
-            <div className="col-md-4 mb-1 services">
-                <i className="fab fa-instagram fa-2x" onClick={() => window.open("https://www.instagram.com/", '_daikiando')}></i>
-            </div>
-            <div className="col-md-4 mb-1 services">
-                <i className="fab fa-twitter fa-2x" onClick={() => window.open("https://www.Twitter.com/", 'andodaiki2')}></i>
-            </div>
-            <div className="col-md-4 mb-1 services">
-                <i className="fab fa-facebook fa-2x" onClick={() => window.open("https://www.facebook.com/", 'profile.php?id=100011448557801')}></i>
-            </div>
-            </div>
-            <section id="contact-form" className="text-center">
-            <Button variant="primary" onClick={openGoogleForm}>
-                Open Google Form <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2" />
-            </Button>
-            </section>
-          </div>
-          <div className="col-md-4 mb-4">
-            <h2>Quick Links</h2>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/service">Service</a>
-              </li>
-            </ul>
-          </div>
-          
+            私たちはIT業界で先進的なソリューションを提供する情熱的なチームです。
+          </p>
         </div>
-        <Button
-          onClick={scrollToTop}
-          variant="outline-dark"
-          className="mb-3"
-          style={{ borderRadius: "50%", padding: "8px" }}
-        >
-          <ArrowUp size={20} />
-        </Button>
+
+        {/* Contact Us */}
+        <div style={{ flex: "1 1 300px" }}>
+          <h2
+            style={{
+              fontSize: "1.8rem",
+              marginBottom: "15px",
+              color: "#ff914d",
+              textShadow: "0px 2px 6px rgba(255, 145, 77, 0.6)",
+            }}
+          >
+            Contact Us
+          </h2>
+          <p style={{ fontSize: "1rem", color: "#eaeaea" }}>
+            Email: daikiandoda@pactom.jp
+          </p>
+          <p style={{ fontSize: "1rem", color: "#eaeaea" }}>
+            Phone: 080-9370-2122
+          </p>
+          <div style={{ display: "flex", gap: "15px", marginTop: "10px" }}>
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="2x"
+              style={{ color: "#ff914d", cursor: "pointer" }}
+              onClick={() =>
+                window.open("https://www.instagram.com/", "_blank")
+              }
+            />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              size="2x"
+              style={{ color: "#ff914d", cursor: "pointer" }}
+              onClick={() => window.open("https://www.twitter.com/", "_blank")}
+            />
+            <FontAwesomeIcon
+              icon={faFacebook}
+              size="2x"
+              style={{ color: "#ff914d", cursor: "pointer" }}
+              onClick={() =>
+                window.open("https://www.facebook.com/", "_blank")
+              }
+            />
+          </div>
+          <Button
+            onClick={openGoogleForm}
+            style={{
+              marginTop: "20px",
+              backgroundColor: "#ff914d",
+              border: "none",
+              padding: "10px 20px",
+              fontSize: "1rem",
+              cursor: "pointer",
+            }}
+          >
+            Open Google Form
+          </Button>
+        </div>
+
+        {/* Quick Links */}
+        <div style={{ flex: "1 1 300px" }}>
+          <h2
+            style={{
+              fontSize: "1.8rem",
+              marginBottom: "15px",
+              color: "#ff914d",
+              textShadow: "0px 2px 6px rgba(255, 145, 77, 0.6)",
+            }}
+          >
+            Quick Links
+          </h2>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            <li style={{ marginBottom: "10px" }}>
+              <a
+                href="/"
+                style={{
+                  color: "#eaeaea",
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#ff914d")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#eaeaea")}
+              >
+                Home
+              </a>
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <a
+                href="/about"
+                style={{
+                  color: "#eaeaea",
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#ff914d")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#eaeaea")}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/service"
+                style={{
+                  color: "#eaeaea",
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#ff914d")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#eaeaea")}
+              >
+                Portfolio
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="text-center">
-        <p>&copy; 2024 Pactom All Rights Reserved.</p>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <FontAwesomeIcon
+          icon={faArrowUp}
+          size="2x"
+          style={{
+            color: "#ff914d",
+            cursor: "pointer",
+            marginBottom: "10px",
+          }}
+          onClick={scrollToTop}
+        />
+        <p style={{ color: "#eaeaea", fontSize: "0.9rem", margin: "10px 0" }}>
+          &copy; 2024 Pactom All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

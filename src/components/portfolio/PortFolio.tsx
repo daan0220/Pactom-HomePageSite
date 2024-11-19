@@ -45,7 +45,7 @@ const projects = [
   },
 ];
 
-const PortFolio: React.FC = () => {
+const Portfolio: React.FC = () => {
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
@@ -73,12 +73,12 @@ const PortFolio: React.FC = () => {
       >
         <section id="service">
           <div className="text-center">
-            <h1 style={{
-                  fontSize: "3rem",
-                  marginBottom: "50px",
-                  textShadow: "0px 4px 6px rgba(0, 255, 255, 0.6)",
-                  animation: "text-glow 1.5s infinite alternate",
-                }}
+            <h1
+              className="text-center mb-4"
+              style={{
+                fontSize: "3rem",
+                textShadow: "0px 4px 6px rgba(255, 145, 77, 0.6)", 
+              }}
             >
               Portfolio
             </h1>
@@ -121,4 +121,4 @@ const PortFolio: React.FC = () => {
   );
 };
 
-export default PortFolio;
+export default Portfolio;

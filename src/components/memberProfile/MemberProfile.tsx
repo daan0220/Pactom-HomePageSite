@@ -42,7 +42,7 @@ const MemberProfile: React.FC = () => {
         color: "#fff",
       }}
     >
-      <h2
+      <h1
         className="text-center mb-4"
         style={{
           fontSize: "3rem",
@@ -50,7 +50,7 @@ const MemberProfile: React.FC = () => {
         }}
       >
         Member
-      </h2>
+      </h1>
       <Row xs={1} md={3} className="g-4 justify-content-center">
         {members.map((member, index) => (
           <Col key={index}>

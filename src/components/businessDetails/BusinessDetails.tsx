@@ -133,7 +133,7 @@ const BusinessDetails: React.FC = () => {
           animation: "text-glow 1.5s infinite alternate",
         }}
       >
-        Our Services
+        Services
       </h2>
       {businesses.map((business, index) => (
         <motion.div
@@ -192,7 +192,7 @@ const BusinessDetails: React.FC = () => {
                   alignItems: "center",
                   marginBottom: "15px",
                   padding: "10px",
-                  borderLeft: "4px solid #ff914d", // オレンジ色に変更
+                  borderLeft: "4px solid #ff914d", 
                   background: "rgba(255, 255, 255, 0.05)",
                   borderRadius: "10px",
                 }}
@@ -201,7 +201,7 @@ const BusinessDetails: React.FC = () => {
                   className={`${detail.icon} me-3`}
                   style={{
                     fontSize: "1.8rem",
-                    color: "#ff914d", // オレンジ色に変更
+                    color: "#ff914d", 
                     flexShrink: 0,
                   }}
                 ></i>
@@ -209,7 +209,7 @@ const BusinessDetails: React.FC = () => {
                   <strong
                     style={{
                       fontSize: "1.2rem",
-                      color: "#ff914d", // オレンジ色に変更
+                      color: "#ff914d", 
                     }}
                   >
                     {detail.title}

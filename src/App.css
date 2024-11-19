@@ -41,15 +41,33 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 19px;
+  position: relative;
+  display: inline-block;
+  color: #fff; 
   text-decoration: none;
-  color: var(--white-color);
-  transition: all 0.2s;
+  font-size: 1.2rem;
+  transition: color 0.3s ease; 
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background-color: #ff914d; 
+  transition: width 0.4s ease; 
 }
 
 nav ul li a:hover {
-  color: #48b4af;
+  color: #ff914d; 
 }
+
+nav ul li a:hover::before {
+  width: 100%; 
+}
+
 
 .container {
    padding: 170px;

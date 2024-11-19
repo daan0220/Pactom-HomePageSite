@@ -6,13 +6,14 @@ interface InitialAnimationProps {
 }
 
 const InitialAnimation: React.FC<InitialAnimationProps> = ({ onComplete }) => {
+  const letters = "Pactom".split(""); 
+
   useEffect(() => {
-    // アニメーション終了後にコールバックを呼び出す
     const timer = setTimeout(() => {
       onComplete();
-    }, 5000); // アニメーションの遅延と一致させる
+    }, 5000); 
 
-    return () => clearTimeout(timer); // クリーンアップ
+    return () => clearTimeout(timer);
   }, [onComplete]);
 
   return (
@@ -35,7 +36,6 @@ const InitialAnimation: React.FC<InitialAnimationProps> = ({ onComplete }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, delay: 4.8 }}
     >
-      {/* 背景の光の粒子アニメーション */}
       {[...Array(30)].map((_, i) => (
         <motion.div
           key={i}
@@ -47,8 +47,8 @@ const InitialAnimation: React.FC<InitialAnimationProps> = ({ onComplete }) => {
             background: "rgba(255, 145, 77, 0.8)",
           }}
           initial={{
-            top: `${Math.random() * 100}vh`,
-            left: `${Math.random() * 100}vw`,
+            top: `${Math.random() * 150 - 50}vh`, 
+            left: `${Math.random() * 150 - 50}vw`,
             opacity: 0,
             scale: 0,
           }}
@@ -66,75 +66,46 @@ const InitialAnimation: React.FC<InitialAnimationProps> = ({ onComplete }) => {
         />
       ))}
 
-      {/* メインのロゴアニメーション */}
       <motion.div
         style={{
-          position: "relative",
-          zIndex: 10,
           display: "flex",
-          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
+          position: "relative",
         }}
       >
-        <motion.h1
-          style={{
-            fontSize: "5rem",
-            color: "#ff914d",
-            textShadow: "0px 0px 30px rgba(255, 145, 77, 1)",
-            fontFamily: "Arial, sans-serif",
-          }}
-          initial={{ scale: 0, rotate: 0 }}
-          animate={{
-            scale: [0, 1.3, 1],
-            rotate: [0, 360],
-          }}
-          transition={{
-            duration: 3.5,
-            ease: "easeInOut",
-          }}
-        >
-          Pactom
-        </motion.h1>
-        <motion.p
-          style={{
-            fontSize: "1.5rem",
-            color: "#fff",
-            marginTop: "1rem",
-            opacity: 0.8,
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 0.8, 1], y: [20, 0] }}
-          transition={{
-            delay: 1.5,
-            duration: 2,
-            ease: "easeOut",
-          }}
-        >
-          Powering the Future of AI
-        </motion.p>
+        {letters.map((letter, index) => (
+          <motion.span
+            key={index}
+            style={{
+              fontSize: "5rem",
+              color: "#ff914d",
+              fontWeight: "bold",
+              textShadow: "0px 0px 30px rgba(255, 145, 77, 0.8)",
+              position: "relative",
+              display: "inline-block",
+              margin: "0 5px", 
+            }}
+            initial={{
+              x: `${Math.random() * 800 - 400}px`, 
+              y: `${Math.random() * 800 - 400}px`,
+              opacity: 0,
+            }}
+            animate={{
+              x: 0, 
+              y: 0, 
+              opacity: 1,
+              transition: {
+                delay: index * 0.3, 
+                duration: 1.2,
+                ease: "easeOut",
+              },
+            }}
+          >
+            {letter}
+          </motion.span>
+        ))}
       </motion.div>
-
-      {/* フレアのエフェクト */}
-      <motion.div
-        style={{
-          position: "absolute",
-          width: "200px",
-          height: "200px",
-          background: "radial-gradient(circle, rgba(255,145,77,0.5) 0%, rgba(0,0,0,0) 80%)",
-          borderRadius: "50%",
-          zIndex: 5,
-        }}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{
-          scale: [0, 1.5, 2],
-          opacity: [0.5, 0.3, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          repeatType: "loop",
-        }}
-      />
     </motion.div>
   );
 };
