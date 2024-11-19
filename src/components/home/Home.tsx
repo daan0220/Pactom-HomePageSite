@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import InitialTransition from "../../utils/InitialTransition";
 import InitialAnimation from "../../utils/InitialAnimation";
 import BusinessDetails from "../businessDetails/BusinessDetails";
-import Portfolio from "../portfolio/Portfolio";
+import Service from "../service/Service";
 import MemberProfile from "../memberProfile/MemberProfile";
 import CompanyDescliption from "../companyDescliption/CompanyDescliption";
 import Footer from "../Footer";
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
             </div>
 
             <AnimatedSection>
-              <Portfolio />
+              <Service />
             </AnimatedSection>
 
             <AnimatedSection>

@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/home/Home";
-import Blog from "./components/about/Blog";
-import PortFolio from "./components/portfolio/Portfolio";
+import About from "./components/about/Index";
+import Service from "./components/service/Service";
+import Recruit from "./components/recruit/Recruit";
 import { AnimatePresence } from "framer-motion";
 import InitialTransition from "./utils/InitialTransition";
 import ThreeBackground from "./components/ThreeBackground"; 
@@ -23,8 +24,9 @@ function App() {
           <Header />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Blog />} />
-            <Route path="/portfolio" element={<PortFolio/>} />
+            <Route path="/about" element={<About />} />
+            <Route path="/service" element={<Service/>} />
+            <Route path="/recruit" element={<Recruit/>} />
           </Routes>
         </InitialTransition>
       </AnimatePresence>

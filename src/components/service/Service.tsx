@@ -45,7 +45,7 @@ const projects = [
   },
 ];
 
-const Portfolio: React.FC = () => {
+const Service: React.FC = () => {
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
@@ -121,4 +121,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio;
+export default Service;
