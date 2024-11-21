@@ -21,6 +21,9 @@ const Header = () => {
           <li>
             <a href="/recruit"><h6>RECRUIT</h6></a>
           </li>
+          <li>
+            <a href="/contacts"><h6>CONTACTS</h6></a>
+          </li>
         </ul>
       </nav>
     </header>

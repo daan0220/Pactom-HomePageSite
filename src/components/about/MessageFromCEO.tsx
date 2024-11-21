@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import DynamicLines from "./DynamicLines"; // 背景ラインコンポーネントをインポート
-import CEOImage from "../../Images/IMG_6839.jpg"; // 画像を正しくインポート
+import CEOImage from "../../Images/IMG_6839.jpg"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faXTwitter, faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -34,7 +33,7 @@ const MessageFromCEO: React.FC = () => {
           }}
         >
           <img
-            src={CEOImage} // 修正: 変数を使う
+            src={CEOImage} 
             alt="CEO"
             style={{
               width: "300px",
@@ -63,7 +62,7 @@ const MessageFromCEO: React.FC = () => {
             }}
           >
             <a
-              href="https://github.com/username"
+              href="https://github.com/daan0220"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff", textDecoration: "none" }}
@@ -77,7 +76,7 @@ const MessageFromCEO: React.FC = () => {
               />
             </a>
             <a
-              href="https://twitter.com/username"
+              href="https://x.com/andodaiki2"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff", textDecoration: "none" }}
@@ -91,7 +90,7 @@ const MessageFromCEO: React.FC = () => {
               />
             </a>
             <a
-              href="https://facebook.com/username"
+              href="https://www.facebook.com/profile.php?id=100011448557801"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff", textDecoration: "none" }}
@@ -105,7 +104,7 @@ const MessageFromCEO: React.FC = () => {
               />
             </a>
             <a
-              href="https://linkedin.com/in/username"
+              href="https://www.linkedin.com/in/daiki-ando-207a112a1/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff", textDecoration: "none" }}

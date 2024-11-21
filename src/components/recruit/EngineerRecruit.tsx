@@ -17,7 +17,7 @@ const EngineerRecruit: React.FC = () => {
       <h2
         style={{
           fontSize: "3rem",
-          color: "#ff914d",
+          color: "#fff",
           marginBottom: "30px",
           textShadow: "0px 0px 15px rgba(255, 145, 77, 0.8)",
         }}
